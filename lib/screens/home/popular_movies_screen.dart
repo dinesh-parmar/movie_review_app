@@ -1,5 +1,4 @@
 // ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:lazy_load_scrollview/lazy_load_scrollview.dart';
 import 'package:movie_review_app/model/response/movie_detail.dart';
@@ -54,7 +53,7 @@ class _PopularMoviesScreenState extends State<PopularMoviesScreen> {
                       shrinkWrap: true,
                       itemCount: popularMoviesIN.state.length,
                       itemBuilder: (ctx, int index) {
-                        return SizedBox(height: 250, width: double.maxFinite, child: MovieCard(movieDetail: popularMoviesIN.state[index]));
+                        return MovieCard(movieDetail: popularMoviesIN.state[index]);
                       },
                     ),
                   ),

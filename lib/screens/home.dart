@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_review_app/screens/home/movies_in_theater.dart';
 import 'package:movie_review_app/screens/home/popular_movies_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       )
     ];
     _tabController = TabController(length: tabs.length, vsync: this);
-    screens = [const PopularMoviesScreen(), Container(), Container(), Container()];
+    screens = [const PopularMoviesScreen(), const InTheaterMovies(), Container(), Container()];
   }
 
   @override

@@ -1,3 +1,4 @@
+import 'package:movie_review_app/model/response/in_theater_movies.dart';
 import 'package:movie_review_app/model/response/popular_movies.dart';
 import 'package:movie_review_app/util/helpers.dart';
 import 'package:retrofit/retrofit.dart';
@@ -11,4 +12,7 @@ abstract class Movieapi {
 
   @GET('/popular')
   Future<PopularMovies> getPopularMovies(@Query('page') int pageNo);
+
+  @GET("/now_playing")
+  Future<InTheaterMovies> getInTheaterMovies(@Query('page') int pageNo);
 }
