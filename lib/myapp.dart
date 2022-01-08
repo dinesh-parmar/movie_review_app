@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movie_review_app/gen/fonts.gen.dart';
 import 'package:movie_review_app/screens/home.dart';
 import 'package:movie_review_app/util/constants.dart';
 import 'package:movie_review_app/util/routes.dart';
@@ -11,14 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
-      /*ThemeData(
-        textTheme: const TextTheme(headline1: TextStyle(fontFamily: FontFamily.poppinsBold), bodyText1: TextStyle(fontFamily: FontFamily.poppinsMedium)),
-        primaryColor: Colors.white,
-        primaryColorDark: Colors.grey[500],
-        scaffoldBackgroundColor: Colors.black,
-        colorScheme: ColorScheme.fromSwatch().copyWith(primary: AppColors.primarySwatch),
-      ),*/
+      theme: darkTheme,
       navigatorKey: RM.navigate.navigatorKey,
       onGenerateRoute: RM.navigate.onGenerateRoute(
         {
