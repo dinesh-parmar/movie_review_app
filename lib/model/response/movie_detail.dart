@@ -46,4 +46,6 @@ class MovieDetail {
   factory MovieDetail.fromJson(Map<String, dynamic> json) => _$MovieDetailFromJson(json);
 
   Map<String, dynamic> toJson() => _$MovieDetailToJson(this);
+
+  DateTime get releaseDateTime => DateTime.parse(releaseDate ?? "");
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_review_app/screens/home/movies_in_theater.dart';
-import 'package:movie_review_app/screens/home/popular_movies_screen.dart';
+import 'package:movie_review_app/api_data/api/movieapi.dart';
+import 'package:movie_review_app/screens/home/movies_for_service_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       )
     ];
     _tabController = TabController(length: tabs.length, vsync: this);
-    screens = [const PopularMoviesScreen(), const InTheaterMovies(), Container(), Container()];
+    screens = ServiceName.values.map((e) => MoviesForServiceScreen(serviceName: e)).toList();
   }
 
   @override

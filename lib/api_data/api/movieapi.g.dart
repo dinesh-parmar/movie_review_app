@@ -14,34 +14,34 @@ class _Movieapi implements Movieapi {
   String? baseUrl;
 
   @override
-  Future<PopularMovies> getPopularMovies(pageNo) async {
+  Future<MoviesResp> getMoviesForService(serviceName, pageNo) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'page': pageNo};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<PopularMovies>(
+        _setStreamType<MoviesResp>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/popular',
+                .compose(_dio.options, '/${serviceName}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = PopularMovies.fromJson(_result.data!);
+    final value = MoviesResp.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<InTheaterMovies> getInTheaterMovies(pageNo) async {
+  Future<FullMovieDetail> getMovieDetails(movieId) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'page': pageNo};
+    final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<InTheaterMovies>(
+        _setStreamType<FullMovieDetail>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/now_playing',
+                .compose(_dio.options, '/${movieId}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = InTheaterMovies.fromJson(_result.data!);
+    final value = FullMovieDetail.fromJson(_result.data!);
     return value;
   }
 

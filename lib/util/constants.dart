@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:movie_review_app/gen/fonts.gen.dart';
 
@@ -139,13 +141,13 @@ ThemeData darkTheme = ThemeData(
     button: TextStyle(
       fontSize: 15,
       height: 1.6,
-      color: Color(0xff212330),
+      color: Colors.white,
       fontWeight: FontWeight.w600,
       fontFamily: FontFamily.poppinsMedium,
     ),
     bodyText2: TextStyle(
       fontSize: 12,
-      color: Color(0xff1B1D28),
+      color: Colors.white,
       fontWeight: FontWeight.w500,
       fontFamily: FontFamily.poppinsRegular,
     ),
@@ -158,7 +160,7 @@ ThemeData darkTheme = ThemeData(
     ),
     headline2: TextStyle(
       fontSize: 24,
-      color: Color(0xff171822),
+      color: Colors.white,
       fontWeight: FontWeight.w600,
       fontFamily: FontFamily.poppinsBold,
     ),
@@ -176,19 +178,19 @@ ThemeData darkTheme = ThemeData(
     ),
     headline5: TextStyle(
       fontSize: 22,
-      color: Colors.black,
+      color: Colors.white,
       fontWeight: FontWeight.w600,
       fontFamily: FontFamily.poppinsSemiBold,
     ),
     headline6: TextStyle(
       fontSize: 20,
-      color: Colors.black,
+      color: Colors.white,
       fontWeight: FontWeight.w500,
       fontFamily: FontFamily.poppinsLight,
     ),
     subtitle1: TextStyle(
       fontSize: 18,
-      color: Colors.black,
+      color: Color(0xff706F76),
       fontWeight: FontWeight.w700,
       fontFamily: FontFamily.poppinsRegular,
     ),

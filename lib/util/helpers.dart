@@ -9,6 +9,12 @@ void showSimpleDialog(String? title, String? message) async => RM.navigate.toDia
       AlertDialog(
         title: Text(title ?? ""),
         content: Text(message ?? ""),
+        actions: [
+          TextButton(
+            child: const Text("Ok"),
+            onPressed: () => RM.navigate.back(),
+          )
+        ],
       ),
     );
 
