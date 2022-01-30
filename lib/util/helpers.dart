@@ -21,7 +21,11 @@ void showSimpleDialog(String? title, String? message) async => RM.navigate.toDia
 Dio buildDio() {
   final Dio dio = Dio();
   if (kDebugMode) dio.interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
-  dio.interceptors.add(ApiKeyInterceptor(apiKey: dotenv.env["TMDB_API_KEY"] ?? ""));
+  if (kIsWeb) {
+    dio.interceptors.add(ApiKeyInterceptor(apiKey: const String.fromEnvironment("TMDB_API_KEY")));
+  } else {
+    dio.interceptors.add(ApiKeyInterceptor(apiKey: dotenv.env["TMDB_API_KEY"] ?? ""));
+  }
   return dio;
 }
 
