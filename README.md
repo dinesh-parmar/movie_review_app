@@ -1,16 +1,16 @@
-# movie_review_app
+# movie_review_app : FLutter Flix 
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+A Flutter app which will show all the upcoming, Top rated, Currently In theater movies and details about them
 
-A few resources to get you started if this is your first Flutter project:
+[TMDB Movie API](https://www.themoviedb.org/documentation/api) is used to fetch the data
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Packages used:
+ 1. [States Rebuilder](https://pub.dev/packages/states_rebuilder). A Powerful and convenient state management. 
+ 2. [Build Runner](https://pub.dev/packages/build_runner). I have used build_runner to convert all JSON responses to Dart data class.
+ 3. [Retrofit and Dio](https://pub.dev/packages/retrofit). For Easy API request and intercepting each API req to send my API_KEY
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Web app is available [here](https://flutter-flix.herokuapp.com).
