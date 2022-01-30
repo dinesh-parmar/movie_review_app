@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:movie_review_app/dio/api_key_interceptor.dart';
-import 'package:movie_review_app/util/secrets.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 import 'package:dio/dio.dart';
 
@@ -21,7 +21,7 @@ void showSimpleDialog(String? title, String? message) async => RM.navigate.toDia
 Dio buildDio() {
   final Dio dio = Dio();
   if (kDebugMode) dio.interceptors.add(LogInterceptor(requestBody: true, responseBody: true));
-  dio.interceptors.add(ApiKeyInterceptor(apiKey: const String.fromEnvironment('TMDB_API_KEY')));
+  dio.interceptors.add(ApiKeyInterceptor(apiKey: dotenv.env["TMDB_API_KEY"] ?? ""));
   return dio;
 }
 
