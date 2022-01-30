@@ -6,7 +6,7 @@ A new Flutter project.
 
 A Flutter app which will show all the upcoming, Top rated, Currently In theater movies and details about them
 
-TMDB Movie API is used to fetch the data
+[TMDB Movie API](https://www.themoviedb.org/documentation/api) is used to fetch the data
 
 ## Packages used:
  1. [States Rebuilder](https://pub.dev/packages/states_rebuilder). A Powerful and convenient state management. 
