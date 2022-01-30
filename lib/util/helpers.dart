@@ -7,7 +7,7 @@ import 'package:dio/dio.dart';
 void showSimpleDialog(String? title, String? message) async => RM.navigate.toDialog(
       AlertDialog(
         title: Text(title ?? ""),
-        content: Text(message ?? ""),
+        content: Text(message ?? "", style: const TextStyle(color: Colors.purple)),
         actions: [
           TextButton(
             child: const Text("Ok"),

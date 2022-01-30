@@ -39,7 +39,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Movies", style: TextStyle(fontSize: 40)),
+        title: const Text.rich(TextSpan(
+            text: "Flutter ",
+            children: [
+              TextSpan(text: "Flix", style: TextStyle(color: Colors.amber)),
+              TextSpan(text: "."),
+            ],
+            style: TextStyle(fontSize: 40))),
       ),
       body: Column(
         children: [
