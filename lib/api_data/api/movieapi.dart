@@ -2,6 +2,7 @@
 
 import 'package:movie_review_app/model/response/full_movie_detail.dart';
 import 'package:movie_review_app/model/response/movies_response.dart';
+import 'package:movie_review_app/model/response/reviews_response.dart';
 import 'package:movie_review_app/util/helpers.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
@@ -17,6 +18,9 @@ abstract class Movieapi {
 
   @GET('/{movieId}')
   Future<FullMovieDetail> getMovieDetails(@Path('movieId') int movieId);
+
+  @GET('/{movie_id}/reviews')
+  Future<ReviewsResponse> getReviews(@Path('movie_id') int movieId, @Query('page') int pageNo);
 }
 
 enum ServiceName { popular, now_playing, upcoming, top_rated }

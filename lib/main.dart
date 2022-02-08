@@ -11,7 +11,7 @@ class SplashHandler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Splash Screen',
+      title: 'Flutter Flix',
       theme: ThemeData(primaryColor: Colors.white),
       home: const SplashScreen(),
     );

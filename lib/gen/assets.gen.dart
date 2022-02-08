@@ -14,10 +14,19 @@ class $AssetsAnimationsGen {
   String get splashScreen => 'assets/animations/splash_screen.json';
 }
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/profileimage.png
+  AssetGenImage get profileimage =>
+      const AssetGenImage('assets/images/profileimage.png');
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage extends AssetImage {

@@ -51,6 +51,7 @@ flutter:
 
   assets:
     - assets/animations/
+    - assets/images/
 
   fonts:
     - family: Poppins-Bold

@@ -1,5 +1,8 @@
 extension ImageLinkX on String {
-  getImageLink([int? width]) => 'https://image.tmdb.org/t/p/${(width != null ? 'w' + width.toString() : 'original')}' + this;
+  getImageLink([int? width]) {
+    if (contains("https")) return substring(1);
+    return 'https://image.tmdb.org/t/p/${(width != null ? 'w' + width.toString() : 'original')}' + this;
+  }
 }
 
 extension IntExtension on int {

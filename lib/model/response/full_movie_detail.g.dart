@@ -39,7 +39,7 @@ FullMovieDetail _$FullMovieDetailFromJson(Map<String, dynamic> json) =>
       tagline: json['tagline'] as String?,
       title: json['title'] as String?,
       video: json['video'] as bool?,
-      voteAverage: json['vote_average'] as double?,
+      voteAverage: (json['vote_average'] as num?)?.toDouble(),
       voteCount: json['vote_count'] as int?,
     );
 

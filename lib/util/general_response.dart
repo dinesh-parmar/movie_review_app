@@ -13,7 +13,7 @@ class GeneralResponse<T> {
 
   Future<void> showErrorDialog() async {
     if (apiError != null) {
-      return showSimpleDialog("Status: ${apiError?.status}", apiError!.statusMessage);
+      return await showSimpleDialog("Status: ${apiError?.status}", apiError!.statusMessage);
     }
   }
 }

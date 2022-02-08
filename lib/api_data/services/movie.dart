@@ -1,6 +1,7 @@
 import 'package:movie_review_app/api_data/api/movieapi.dart';
 import 'package:movie_review_app/model/response/full_movie_detail.dart';
 import 'package:movie_review_app/model/response/movies_response.dart';
+import 'package:movie_review_app/model/response/reviews_response.dart';
 import 'package:movie_review_app/util/general_response.dart';
 
 import '../base_api.dart';
@@ -14,4 +15,6 @@ class MovieService with BaseApi {
       loadResponse(() => _movieApi.getMoviesForService(serviceName.name, pageNo));
 
   Future<GeneralResponse<FullMovieDetail>> getMovieDetails(int movieId) => loadResponse(() => _movieApi.getMovieDetails(movieId));
+
+  Future<GeneralResponse<ReviewsResponse>> getReviews(int movieId, int pageNo) => loadResponse(() => _movieApi.getReviews(movieId, pageNo));
 }

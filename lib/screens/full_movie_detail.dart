@@ -5,6 +5,7 @@ import 'package:movie_review_app/model/response/movie_detail.dart';
 import 'package:movie_review_app/util/extensions.dart';
 import 'package:movie_review_app/util/services.dart';
 import 'package:movie_review_app/widget/platform_cached_network_image.dart';
+import 'package:movie_review_app/widget/review_bar.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 class FullMovieDetailScreen extends StatefulWidget {
@@ -114,6 +115,7 @@ class _FullMovieDetailScreenState extends State<FullMovieDetailScreen> {
                                 ),
                               ),
                       ),
+                      _isWaiting ? const SizedBox() : ReviewBar(movieId: _movie.id!),
                     ],
                   ),
                 );
